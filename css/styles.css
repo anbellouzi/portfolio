@@ -5,22 +5,6 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
-/* .container {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.home_banner {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.home_banner img {
-  margin: 0;
-  padding: 0;
-} */
 
 .home {
   width: 100%;
@@ -237,7 +221,7 @@ nav a {
 
   grid-template-areas: "a b b"
                        "c c d"
-                       "e f f";
+                       "e f d";
 }
 .grid-a {
   grid-area: a;
@@ -285,12 +269,72 @@ nav a {
   border-radius: 4px;
 }
 
+.portfolio h3, #about h3 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 55px;
+  color: #2C2C2C;
+  position: relative;
+  z-index: 0;
+  padding-bottom: 15px;
+  /* margin: auto; */
+  text-align: center;
+}
+
+.banner {
+  margin-top: 5px;
+  width: 1200px;
+  height: auto;
+  margin: auto;
+}
+
+.card-row {
+  display: flex;
+  justify-content: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+.ms-slide-show {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+#slides{
+  height: 400px;
+}
+.ms-slide-show > .slide-show-inner {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  transform: translate3d(0,0,0);
+  transition: 1s;
+  transition-timing-function: linear;
+}
+
+.ms-slide-show-idicator {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.ms-slide-show-idicator > .ms-slide-indicator {
+  width: 16px;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
 
 /* #### Mobile Phones Portrait #### */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1010px) {
   /* some CSS here */
   .top_banner ul > li > a{
-    color: red;
     text-decoration: none;
   }
 
@@ -303,7 +347,6 @@ nav a {
   }
 
   .contacts {
-    background-color: red;
     width: 350px;
     float: none;
 
@@ -346,12 +389,35 @@ nav a {
 
 }
 
+/* image carousel */
 
 
 @media only screen
   and (min-width: 320px)
   and (max-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
+
+    .grid {
+      width: 70%;
+      margin: auto;
+      /* Declare the container as display grid */
+      display: grid;
+      /* declare three columns woth px sizes */
+      grid-template-columns: repeat(2, 1fr);
+      /* Declare the size of three rows */
+      grid-template-rows: 50 repeat(3, 300px);
+      /* The gap between rows and columns */
+      grid-gap: 10px 10px;
+
+      grid-template-areas: "a b"
+                           "c d"
+                           "e f";
+    }
+
+    .box {
+      height: 150px;
+    }
+
 
   .home {
     height: 100%;
@@ -378,6 +444,9 @@ nav a {
     margin-bottom: 15px;
   }
 
+  .d img {
+    height: 100%;
+  }
 
 
 }
