@@ -33,6 +33,17 @@ body {
   margin:0;
 }
 
+.portfolio {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  /* background-image: url(https://backgroundcheckall.com/wp-content/uploads/2017/12/technical-background-images.jpg); */
+  /* background-position: cover; */
+  /* background-size: 120%; */
+  /* background-repeat: no-repeat; */
+  margin:0;
+}
+
 .line_bottom {
   border-bottom:1px solid grey;
 }
@@ -73,14 +84,18 @@ nav {
   background-color: rgba(0, 0, 0, 0.4);
   height: 40px;
   margin: 0;
-
+  padding: 5px;
+  padding-top: 10px;
 }
+
 .top_banner ul, nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
+
+
 .top_banner ul > li, nav ul > li {
   float: left;
   margin: 5px;
@@ -88,8 +103,26 @@ nav {
 }
 
 nav ul {
-  width: 50%;
-  margin: auto;
+  width: 60%;
+  margin: 0 auto;
+}
+
+nav ul > li{
+  margin: 0 8px 0 8px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: 400;
+  display: inline-block;
+  padding: 0px 0px 0px 0px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  text-transform: capitalize;
+
 }
 .top_banner ul > li > a{
   color: white;
@@ -112,7 +145,13 @@ nav ul {
   color: white;
 }
 .p-5 {
-  padding: 10px;
+  padding: 5px;
+}
+.pt-5 {
+  padding-top: 5px;
+}
+.pb-5 {
+  padding-bottom: 5px;
 }
 
 .align-vertical {
@@ -132,6 +171,7 @@ nav ul {
 }
 
 .fa {
+  color: white;
   margin: 5px;
 }
 
@@ -152,12 +192,13 @@ nav ul {
     text-transform: capitalize;
     letter-spacing: 2px;
     font-weight: 400;
-    line-height: 62px;
+    margin: 0;
 }
 .hero p {
   font-size: 20px;
   font-weight: 400;
   color: #D5D5D5;
+  margin-bottom: 30px;
 }
 
 .hero button {
@@ -166,6 +207,7 @@ nav ul {
   cursor: pointer;
   margin-right: 10px;
   color: white;
+  margin-top: 5px;
 }
 
 .portfolio_button {
@@ -179,4 +221,163 @@ nav ul {
 
 .contact_button:hover {
   background-color: green;
+}
+
+.grid {
+  width: 70%;
+  margin: auto;
+  /* Declare the container as display grid */
+  display: grid;
+  /* declare three columns woth px sizes */
+  grid-template-columns: repeat(3, 1fr);
+  /* Declare the size of three rows */
+  grid-template-rows: 50 repeat(3, 300px);
+  /* The gap between rows and columns */
+  grid-gap: 10px 10px;
+
+  grid-template-areas: "a b b"
+                       "c c d"
+                       "e f f";
+}
+.grid-a {
+  grid-area: a;
+}
+.grid-b {
+  grid-area: b;
+}
+.grid-c {
+  grid-area: c;
+}
+.grid-d {
+  grid-area: d;
+}
+.grid-e {
+  grid-area: e;
+}
+.grid-f {
+  grid-area: f;
+}
+
+
+.box {
+  padding: 5px;
+  height: 200px;
+}
+.portfolio h1 {
+  width: 100px;
+  margin: auto;
+}
+
+.fa-search {
+  color: white;
+  /* padding: 15px 5px 0 5px; */
+}
+
+.search_button {
+  background: #28AE60;
+  padding: 10px 26px;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid transparent;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-width: 600px) {
+  /* some CSS here */
+  .top_banner ul > li > a{
+    color: red;
+    text-decoration: none;
+  }
+
+  .top_banner ul{
+    width: 150px;
+  }
+
+  .icons {
+    width: 80px;
+  }
+
+  .contacts {
+    background-color: red;
+    width: 350px;
+    float: none;
+
+  }
+
+  .search {
+    position: absolute;
+    display: none;
+  }
+
+  .home {
+    height: 100%;
+    width: 100%;
+    background-position: cover;
+    background-size: 200%;
+
+  }
+
+  .row {
+    width: 90%;
+  }
+  nav ul {
+    width: 100%;
+    margin: 0;
+  }
+
+  .card {
+    top: 25%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .hero {
+    width: 100%;
+    margin: auto;
+  }
+  .hero p {
+    /* text-align: left; */
+  }
+
+}
+
+
+
+@media only screen
+  and (min-width: 320px)
+  and (max-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .home {
+    height: 100%;
+    background-size: 510%;
+
+  }
+
+  body {
+    font-size: 8px;
+  }
+
+  .logo {
+    position: absolute;
+    right: 15%;
+    top: 15px;
+  }
+
+  nav ul {
+    width: 90%;
+    margin: auto;
+  }
+
+  .hero button {
+    margin-bottom: 15px;
+  }
+
+
+
 }
